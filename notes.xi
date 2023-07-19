@@ -1,5 +1,7 @@
 Notes [index]  @
 
+[sublime_theme] .
+
 - Core.js
 - OOP
 - TS
