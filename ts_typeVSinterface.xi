@@ -1,13 +1,17 @@
 [ts]
 
 type&interface .
-. Использование типов объекта(object types) и типов объединения(union types) можно вынести. Для этого можно использовать |type| или |interfaces|.
+. Использование типов объекта(object types) и типов 
+  объединения(union types) можно вынести. Для этого можно использовать 
+  |type| или |interfaces|.
   Type .
+  |{typescript}
   | type Point = {
   |  x: number;
   |  y: number;
   | };
   В |type| мы создаем |type aliase|(имя переменной) и передаем его в параметры функции:
+  |{typescript}
   | function printCoord(params: Point) {
   |   console.log("The coordinate's x value is " + params.x);
   |   console.log("The coordinate's y value is " + params.y);

@@ -1,4 +1,4 @@
-[ts]
+[ts] @
 
 string .
 | const firstName: string = "Dima";
@@ -8,17 +8,14 @@ boolean .
 | const isMarried: boolean = true;
 null .
 | const user: null = null;
-. [ts_config#strict_flags]
-|{ts}strictNullChecks| - включит ошибку при получении |null| & |undefined|.
 undefined .
 | const summary: undefined = undefined;
-. [ts_config#strict_flags]
-|{ts}strictNullChecks| - включит ошибку при получении |null| & |undefined|
 void .
 . The inferred return type is |void|:
 | function noop() {
 |   return;
 | };
-. |void| озdначает, что функция ничего не возвращает.
-| function getVoid(): void { console.log("no return"); };
+. |void| - function is not return anything.
+  |{typescript}
+  | function getVoid(): void { console.log("no return"); };
 ! |void| is not the same as |undefined|.

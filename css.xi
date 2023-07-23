@@ -16,11 +16,13 @@ CSS .
   CSS Transition[] .
   CSS Adaptative[] .
   CSS Favicon[] .
-  CSS BEM[] .
   CSS Grid[] .
   CSS Flex[] .
   CSS Abbreviation[] .
   CSS Reset[] .
+CSS Methodologies .
+  CSS BEM[] .
+  CSS Modules[] .
 Other .
   Sites[] .
   Folders[] .

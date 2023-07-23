@@ -13,22 +13,22 @@ General .
 
 Nonusual .
 . Items are indexed from 1.
-. Referencing unbound name evaluates to |nil|.
-. All variables are in global scope by default, unless |local| keyword.
+. Referencing unbound name evaluates to `nil`.
+. All variables are in global scope by default, unless `local` keyword.
 . Strings are 8-bit without terminating null, no [unicode] support.
-. 0, empty string and empty containers are coerced `into` |true|.
+. 0, empty string and empty containers are coerced `into` `true`.
 . All [composite data type]s (list, map etc) are single [lua table] type.
 . Using length on non-sequence tables with holes is implementation-specific.
 . All numbers are 64-bit [float]s.
-. Has |goto| statement.
-. Strings concatenated via |..|, not |+|.
-. No |++| or |+=|.
-. "Not equal" is |~=|.
-. |for| range includes both ends.
-. |#| "length" prefix operator.
-. |else if| is |elseif|, not |elif| or |else if|.
-. |repeat| with |until| loop.
-. No |continue| for loops.
+. Has `goto` statement.
+. Strings concatenated via `..`, not `+`.
+. No `++` or `+=`.
+. "Not equal" is `~=`.
+. `for` range includes both ends.
+. `#` "length" prefix operator.
+. `else if` is `elseif`, not `elif` or `else if`.
+. `repeat` with `until` loop.
+. No `continue` for loops.
 . Calls with one string or table param don't need parens.
 . "Instance methods" [lua metatable] is set for strings, but not tables.
 
@@ -50,7 +50,7 @@ Scope[] .
   not beginning with a digit and not being a reserved word.
 . As a convention, programs should avoid creating names that start with
   an underscore followed by one or more uppercase letters, ex |_VERSION|.
-. Variable defined in a loop operator is in operator's body scope, ex:
+. `Variable` - defined in a loop operator is in operator's body scope, ex:
   |{lng:lua}
   | for i = 1, 2 do foo() end print(i) -- prints nil, 'i' is out of scope
   All other variables defined in Lua default to the `global` scope unless

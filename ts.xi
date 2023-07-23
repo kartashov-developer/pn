@@ -74,6 +74,8 @@ Ecosystem .
       useful packages [ts_packages] .
   build tools [ts_build] .
 
+. !global.d.ts! - глобальный файл с расширением типов.
+
 . [ts_objects].
 . [ts_!].
 . [ts_guards].
