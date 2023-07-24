@@ -166,4 +166,23 @@ References @
 [ESNext#] [https://www.typescriptlang.org/tsconfig#esnext]
 [CommonJS#] [https://typestrong.org/ts-node/docs/imports/]
 [plugin#] [https://webpack.js.org/plugins/mini-css-extract-plugin/] 
-[cssModules#] [https://webpack.js.org/loaders/css-loader/#modules]         
+[cssModules#] [https://webpack.js.org/loaders/css-loader/#modules]    
+
+
+
+Heading 1 .
+  Heading 2 .
+    Heading 3 .
+      Heading 4 .
+        Heading 5 .
+          Heading 6 .
+. Console is written by impressive association of creating issues. That will be 
+  a massive avoid for all the independent factory. So what is the laundry? 
+  That's not good. `Semmic` - is that will be more iconic. Than |static| 
+  violance. Why you will create all the images for this? That execute a new 
+  scope of new version.
+  |{terminal}
+  | const b = 'Vitality';
+  | function someFunc(b) {
+  |   return b; // -- imperative style
+  | }
