@@ -1,4 +1,4 @@
-
+[web] Webpack @
 
 Install .
 |{terminal}
@@ -6,20 +6,20 @@ Install .
   webpack-dev-server .
   . Automatically update webpack.
   |{terminal}
-  | npm i -D webpack-dev-server 
+  | npm i -D webpack-dev-server
   | webpack serve
   . With TypeScript:
   |{terminal}
   | npm i -D webpack-dev-server @types/webpack-dev-server
     --env .
-    . Переменные окружения. Нужны для того, чтобы передавать их столько, 
+    . Переменные окружения. Нужны для того, чтобы передавать их столько,
     сколько нужно при запуске.
     | webpack serve --env port=3000
     . You may add another flags:
     | webpack serve --env port=3000 mode=development
     ! <env> need to return a function.
   TypeScript + Webpack .
-  . TypeScript [#TS1] 
+  . TypeScript [#TS1]
   |{terminal}
   | npm install --save-dev typescript ts-loader
   . Configuration Languages [#TS2]
@@ -29,7 +29,7 @@ Install .
     # Specify what module code is generated. [#ESNext]
       | "module": "ESNext",
     # Allow 'import x from y' when a module doesn't have a default export.
-      | "allowSyntheticDefaultImports": true, 
+      | "allowSyntheticDefaultImports": true,
     # Enables allowSyntheticDefaultImports for type compatibility.
       | "esModuleInterop": true
     # Transforming to CommonJS. [#CommonJS]
@@ -46,27 +46,26 @@ Install .
 
 
 А зачем вообще нужен Webpack? .
-. Он нужен, чтобы комбинировать разные модули и их зависимости в один 
-  файл, в правильном порядке. Он может парсить код, написанный с 
-  использованием разных модулей и комбинировать в один формат, понятный 
-  браузеру.
-  | JavaScript  ->   
-  | CSS         ->   
+. Он нужен, чтобы комбинировать разные модули и их зависимости в один файл, в
+  правильном порядке. Он может парсить код, написанный с ипользованием разных
+  модулей и комбинировать в один формат, понятный браузеру.
+  | JavaScript  ->
+  | CSS         ->
   | SCSS        -> TRANSFORM ->  WebPack Bundle
-  | Images      ->   
-  | HTML        ->   
+  | Images      ->
+  | HTML        ->
 
 Entry .
-. Точка входа указывает, какой модуль webpack должен использовать, чтобы 
-  начать построение своего графа зависимостей. 
+. Точка входа указывает, какой модуль webpack должен использовать, чтобы
+  начать построение своего графа зависимостей.
   ! Default: {'./src/index.js'}.
   |{webpack.config.js}
   | entry: './path/to/my/entry/file.js'
 
 Output .
-. Данное свойство сообщает веб-пакету, куда создавать пакеты, которые он 
+. Данное свойство сообщает веб-пакету, куда создавать пакеты, которые он
   создает, и как называть эти самые, созданные файлы.
-  . Содержит два вложенных свойства: 
+  . Содержит два вложенных свойства:
     # {path} - куда должны быть отправлены созданные файлы,
     # {filename} - имя бандла.
     # {clean} - |true|,<false> - чистит нашу output папку.
@@ -80,60 +79,60 @@ Output .
   | filename: '[name].[hash].js',
 
 Mode .
-. Данное свойство позволяет включить встроенные опции оптимизации веб-пакета, 
+. Данное свойство позволяет включить встроенные опции оптимизации веб-пакета,
   соответствующие каждой среде.
 . Есть три возможных значения:
   # |development|: выходные данные находятся в разработке, их не надо сжимать.
   # |production|(default value): выходные данные готовы к выгрузке.
   # |none|: <?>
-  
+
 Loaders .
 Module > Rules .
-. Под коробкой webpack понимает только JavaScript и JSON файлы. Лоадеры 
-  позволяют webpack'у обрабатывать другие типы файлов и преобразовывать их в 
+. Под коробкой webpack понимает только JavaScript и JSON файлы. Лоадеры
+  позволяют webpack'у обрабатывать другие типы файлов и преобразовывать их в
   модули, тем самым позволяют работу с ним.
 . Лоадеры записываются в webpack.config.js, в свойство |module|. Каждый лоадер
-  имеет свои правила: 
+  имеет свои правила:
     - в {test} - указывается тип файла,
       ! Регулярное выражение в свойстве {test} не должно быть в кавычках.
     - в {use} - какой лоадер к нему использовать.
   |{webpack.config.js}
   | rules: [{ test: /\.txt$/, use: 'raw-loader'}]
   По сути лоадер говорит: эй, вебпак, когда ты столкнешься с файлом |txt|,
-  используй загрузчик(raw-loader), преобразуй файл и только потом добавь в 
+  используй загрузчик(raw-loader), преобразуй файл и только потом добавь в
   бандл.
   Дефолт .
   |{terminal}
   | npm i -D style-loader css-loader sass-loader file-loader
-  . {style-loader} позволяет внедрить CSS в DOM. 
+  . {style-loader} позволяет внедрить CSS в DOM.
   . {css-loader} позволяет преобразовывать файлы |.css|.
   . {sass-loader} позволяет преобразовывать файлы |.scss| в |.css|.
-  . {file-loader} позволяет импортировать файлы, изображения и другие сущности
-    напрямую в js код.
+  . {file-loader} позволяет импортировать файлы, изображения и другие
+  сущности напрямую в js код.
 
 Plugins .
-. Плагины позволяют оптимизировать бандлы, управлять asset, внедрять 
+. Плагины позволяют оптимизировать бандлы, управлять asset, внедрять
   переменные среды.
-. Чтобы использовать плагин, нужно его импортировать(!require()/import!) и 
+. Чтобы использовать плагин, нужно его импортировать(!require()/import!) и
   добавить его в массив {plugins}.
-. Плагины создаются в виде конструкторов: с помощью конструктора |new|. Это 
+. Плагины создаются в виде конструкторов: с помощью конструктора |new|. Это
   нужно, так как плагины можно использовать несколько раз для разных целей.
 |{webpack.config.js}
 | plugins: [
 |   new HtmlWebpackPlugin({ template: path.resolve(__dirname, 'index.html') })
 | ]
   HTML plugin .
-  . Переносит наш HTML в папку dist и импортирует в него все соответствующие
-    js бандлы, который собирает webpack.
-  |{terminal}
-  | npm install -D html-webpack-plugin
+  . Переносит наш HTML в папку dist и импортирует в него все нужные js
+    бандлы, который собирает webpack.
+    |{terminal}
+    | npm install -D html-webpack-plugin
   . Нужно указать путь к нашему HTML файлу.
   MiniCssExtractPlugin [#plugin] .
   |{terminal}
   | npm install --save-dev mini-css-extract-plugin
 
 Resolve .
-. В нем указываем расширение тех файлов, которые мы не будем указывать при 
+. В нем указываем расширение тех файлов, которые мы не будем указывать при
   импорте.
   |{example}
   | import Component from './component';
@@ -142,7 +141,7 @@ Resolve .
 
 Декомпозиция конфига .
 . Сам конфиг в переменную и экспортируем ее. {export const config}.
-. Создаю отдельную папку !config!, где будут лежать отдельные сегменты 
+. Создаю отдельную папку !config!, где будут лежать отдельные сегменты
   конфига. Одна среда - одна папка.
   . {build > buildLoaders/buildPlugins/buildResolvers}
     TS .
@@ -168,8 +167,8 @@ References @
 [TS2#] [https://webpack.js.org/configuration/configuration-languages/]
 [ESNext#] [https://www.typescriptlang.org/tsconfig#esnext]
 [CommonJS#] [https://typestrong.org/ts-node/docs/imports/]
-[plugin#] [https://webpack.js.org/plugins/mini-css-extract-plugin/] 
-[cssModules#] [https://webpack.js.org/loaders/css-loader/#modules]    
+[plugin#] [https://webpack.js.org/plugins/mini-css-extract-plugin/]
+[cssModules#] [https://webpack.js.org/loaders/css-loader/#modules]
 
 
 
@@ -179,10 +178,10 @@ Heading 1 .
       Heading 4 .
         Heading 5 .
           Heading 6 .
-. Console is written by impressive association of creating issues. That will 
+. Console is written by impressive association of creating issues. That will
   be a massive avoid for all the independent factory. So what is the laundry?
-  That's not good. `Semmic` - is that will be more iconic. Than |static| 
-  violance. Why you will create all the images for this? That execute a new 
+  That's not good. `Semmic` - is that will be more iconic. Than |static|
+  violance. Why you will create all the images for this? That execute a new
   scope of new version.
   |{terminal}
   | const b = 'Vitality';
