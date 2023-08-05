@@ -1,4 +1,4 @@
-Anki @
+[index] Anki @
 
 . [anki_html].
 . [anki_css].

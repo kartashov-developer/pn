@@ -1,8 +1,9 @@
 console.log(`=====================`);
 // Линейный поиск индекса элемента
 let arr = [12, 13, 100, 44, 3];
-let target = 44;
+let target = 44; // нужный элемент
 const linearSearch = (arr, target) => {
+	// функция принимает массив и искомый элемен
 	for (let i = 0; i < arr.length; i++) {
 		if (arr[i] === target) return i;
 	}
