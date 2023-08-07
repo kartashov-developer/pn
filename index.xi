@@ -11,6 +11,7 @@ Knowledgebase @
 . [interviews].
 . [languages].
 
+. [vim].
 . [basics].
 
 Reference @
