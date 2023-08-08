@@ -12,6 +12,7 @@ Knowledgebase @
 . [languages].
 
 . [vim].
+. [vimium].
 . [basics].
 
 Reference @
