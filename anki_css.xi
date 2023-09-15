@@ -1,5 +1,6 @@
 [anki] anki CSS @
 
+
 DONE:Зачем нужны папки 'src' и 'dist'? [folders]
 DONE:Семантические теги? [html_index#semantic tags]
 DONE:<meta charset="UTF-8"> [html_index#html & head]
@@ -19,7 +20,7 @@ TODO:Какие есть виды в блочной модели? [css_blockmode
 TODO:Чем особенны 'Строчные элементы'? Какие есть теги?[css_blockmodel#inline]
 TODO:Чем особенны 'Блочные элементы'? Какие есть теги? [css_blockmodel#block]
 TODO:Чем особенны 'Строчно-блочные элементы'? [css_blockmodel#inline-block]
-TODO:|{css}position: fixed;| Что делать, если блоки наезжают на другие? 
+TODO:|{css}position: fixed;| Что делать, если блоки наезжают на другие?
   [css_position]
 TODO:|{css}position: relative;| Как сдвигать элементы? [css_position]
 TODO:|{css}position: absolute;| [css_position]
