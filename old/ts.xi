@@ -15,9 +15,9 @@ Config [ts_config] .
   . -|class|, -|enum|, ?|arrays|, -|tuples|.
   Other Types [ts_other_types] .
   . |any|, -|object|, |unknown|, -|never|.
-  Assertions [ts_assertionse] .
+  Assertions [ts_assertions] .
   . |as const|, |as [type]|, |as any|.
-Combining Typs .
+Combining Types .
   union type [ts_union] .
   intersection types [ts_intersection_types] .
   keyof operator [ts_keyof_operator] .
@@ -85,4 +85,3 @@ Ecosystem .
 . goto://key_in_object.ts
 . goto://object_return_reduction.ts
 . goto://object_value_string.ts
-

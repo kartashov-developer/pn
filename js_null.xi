@@ -1,4 +1,4 @@
-[js] @
+[js] [js_undefined] [js_null_undefined]  @
 
 null .
 . `Значение отсутствует.`

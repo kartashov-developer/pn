@@ -8,12 +8,14 @@ const linearSearch = (arr, target) => {
 		if (arr[i] === target) return i;
 	}
 };
+
 console.log(
 	`Linear Search:\nNumber: "${target}" is on positon "${linearSearch(
 		arr,
 		target
 	)}" in array: [${arr}]`
 );
+
 console.log(`=====================`);
 // BubbleSort n^2
 let arr2 = [13, 11, 100, 3, 1, 93];
@@ -31,8 +33,7 @@ const bubbleSort = (arr) => {
 	}
 	return array;
 };
-console.log(`BubbleSort:\nWe BubbleSorted an array:[${arr2}]
-into a new copy:[${bubbleSort(arr2)}]`);
+console.log(`BubbleSort:\nWe BubbleSorted an array:[${arr2}] \ninto a new copy: [${bubbleSort(arr2)}]`);
 console.log(`=====================`);
 // Факториал Числа
 const numberForFactorial = 5;
@@ -42,8 +43,7 @@ function factorial(num) {
 	} // Базовое условие рекурсии
 	return num * factorial(num - 1); // Рекурсия
 }
-console.log(`Factorial:
-  Factorial of ${numberForFactorial} is ${factorial(numberForFactorial)}`);
+console.log(`Factorial:\nFactorial of ${numberForFactorial} is ${factorial(numberForFactorial)}`);
 console.log(`=====================`);
 // Последовательность Фибоначчи
 const numberForFibonacci = 5;
