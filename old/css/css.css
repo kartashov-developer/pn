@@ -1,0 +1,7 @@
+.button {
+  flex-grow: calc(100% / 3);
+}
+
+.button {
+  flex-grow: 1
+}

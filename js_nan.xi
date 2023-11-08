@@ -1,13 +1,13 @@
-[js] @
+NaN @
 
 . |NaN| является неравным (посредством сравнения через |==| и |===|) любому
   другому значению, `включая другое значение NaN`.
-  |{js}
+  |{js}  
   | NaN === NaN // false
   | NaN == NaN // false
 . Используйте |Number.isNaN()| или |isNaN()|, чтобы наиболее понятным образом
   определить является ли значение значением |NaN|.
-  |{js}
+  |{js}  
   | isNaN(1) // false
   | Number.isNaN(1) // false
   | isNaN("string") // true, т.к. станет NaN после преобразования в число
@@ -20,7 +20,7 @@
     # |Number.isNaN()|: если оно сейчас равно |NaN|.
 
 Функция проверки NaN #1 .
-|{js}
+|{js}  
 | function checkNaN(x) {
 |   if (isNaN(x)) {
 |     return NaN;
@@ -32,7 +32,7 @@
 | checkNaN('qwerty'); // NaN
 
 Функция проверки NaN #2 .
-|{js}
+|{js}  
 | function valueIsNaN(v) {
 |   return v !== v;
 | }

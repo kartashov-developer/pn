@@ -1,30 +1,30 @@
-[js] [js_null] [js_null_undefined]  @
+undefined @
 
 undefined .
 . `Обозначает, что значение не установлено или неизвестно.`
   Присваивается для:
   # Неициализированных переменных. Это переменная, которой не присвоено
     значение.
-    |{js}
+    |{js}  
     | let name;
     | console.log(name); // undefined
   # Несуществующее свойство объекта.
-    |{js}
+    |{js}  
     | const object = {};
     | console.log(object.firstName); // undefined
   # Для неициализированных аргументов функций.
     Аргумент есть, функция использует его, но он передан.
-    |{js}
+    |{js}  
     | function someFunc(a, b) {
     |   return console.log(b);
     | };
     | someFunc(1); // undefined
   # Функция возвращает |undefined|, если не возвращает какого-либо значения.
-    |{js}
+    |{js}  
     | const doNothing = () => {};
     | console.log(doNothing()); // undefined
   # При изменении примитивного типа.
-    |{js}
+    |{js}  
     | let answer = true; // создаем переменную, значение примитивного типа
     | answer.options = false; // в качестве свойства, добавляем к нашей переменной
     | свойство 'options' и присваиваем ему булевое значение примитивного типа

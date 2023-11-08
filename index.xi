@@ -1,9 +1,15 @@
 index @
 
+. [todo].
+. [learning].
+. [notes].
+. [anki].
+
 Stack .
 . [html].
 . [js].
 . [redux].
+. [css].
 . [git]. ?ADD INFO?
 . [mobx]. ?ADD INFO?
 . [scss]. ?ADD INFO?
@@ -25,8 +31,9 @@ Other .
 . [vim].
 . [vimium].
 . [prettier].
-. [esling].
-. 
+. [eslint].
+. [babel].
+
 . [devtools].
 . [books].
 

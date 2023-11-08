@@ -1,4 +1,4 @@
-[index] @
+Vim @
 
 . [#vimTraining1].
 . [#vimTraining2].
@@ -7,11 +7,10 @@ Vim Grammar .
 . There is only one grammar rule in Vim language: |verb + noun|.
   Nouns(Motions) .
   . Nouns are Vim motions. Motions are used to move around in Vim.
-    ijkl .
-    . How to train? [#ijkltraining1] [#ijkltraining2]
-    # |k| = Move cursor up.
-    # |j| = Move cursor down.
+    hjkl .
     # |h| = Move cursor left.
+    # |j| = Move cursor down.
+    # |k| = Move cursor up.
     # |l| = Move cursor right.
     Other .
     # |w| = Move forward to the beginning of the next word.
@@ -39,12 +38,21 @@ Vim Grammar .
   Режим поиска .
   |/| — поиск от курсора до конца документа.
   |?| — поиск от курсора до начала документа.
-
   |gg| - перейти к началу файла.
   |G| - перейти к концу файла.
 
+Useful .
+  {Move to first line of screen - H}
+  {Move to last line of screen - L}
+  {Lowercase line - Vu}
+  {Find char backwards - F<char>}
+  {Delete backwards until char - dT<char>}
+  {Visually select until char - v/<char><return>}
+  {Yank 2 words - y2aw}
+  {Centre line - zz}
+Training .
+[vimTraining1#] [http://www.vimgenius.com/]
+[vimTraining2#] [https://play2048.co/]
+
 Resources @
 [niki#] [https://wiki.nikiv.dev/text-editors/vim/]
-[ijkltraining1#] [https://collaborative2048.onrender.com/]
-[vimTraining1#] [http://www.vimgenius.com/]
-[vimTraining2] [https://play2048.co/]
