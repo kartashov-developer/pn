@@ -2,13 +2,11 @@ TypeScript  @
 
 Code Examples [ts_code_snippets] .
 TS Articles, challenges & practice [ts_links] .
-Install [ts_install] .
-|{bash}
-| npm install -g typescript
-Running [ts_running] .
+Running [ts_cli] .
 . tsc, CLI, flags.
 Config [ts_config] .
 . Setting up the project(default settings, flags).
+Basics .
   Primitive Types [ts_primitive_types] .
   . |string|, |number|, |boolean|, ?|null|, |void|, ?|undefined|.
   Object Types [ts_object_types] .
